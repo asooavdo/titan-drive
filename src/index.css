@@ -2,95 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Titan Auto FZE Design System */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Titan Black Palette */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Metallic Gold - Primary Brand Color */
+    --primary: 37 36% 61%;
+    --primary-foreground: 0 0% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Dark Surface */
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Gray */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Gold Accent */
+    --accent: 37 36% 61%;
+    --accent-foreground: 0 0% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Titan Red (from logo) */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Subtle Borders */
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.1;
+    --ring: 37 36% 61%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Titan Custom Colors */
+    --titan-black: 0 0% 6%;
+    --titan-black-light: 0 0% 11%;
+    --titan-gold: 37 36% 61%;
+    --titan-gold-light: 37 45% 75%;
+    --titan-red: 0 72% 51%;
+    --titan-white: 0 0% 100%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(37, 36%, 61%) 0%, hsl(37, 45%, 75%) 50%, hsl(37, 36%, 61%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0, 0%, 6%) 0%, hsl(0, 0%, 11%) 100%);
+    --gradient-radial-gold: radial-gradient(ellipse at center, hsla(37, 36%, 61%, 0.3) 0%, transparent 70%);
+    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 6%) 0%, hsl(0, 72%, 15%) 50%, hsl(0, 0%, 6%) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-gold: 0 4px 25px hsla(37, 36%, 61%, 0.3);
+    --shadow-gold-intense: 0 8px 40px hsla(37, 36%, 61%, 0.5);
+    --shadow-dark: 0 10px 40px hsla(0, 0%, 0%, 0.5);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 37 36% 61%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 11%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.1;
+    --sidebar-ring: 37 36% 61%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    --background: 0 0% 6%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 37 36% 61%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 37 36% 61%;
+    --accent-foreground: 0 0% 6%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.1;
+    --ring: 37 36% 61%;
   }
 }
 
@@ -100,6 +103,201 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Metallic Text Effect */
+  .metallic-text {
+    background: var(--gradient-gold);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: metallicShine 4s ease-in-out infinite;
+  }
+
+  /* Titan Card Styling */
+  .titan-card {
+    @apply bg-card/90 backdrop-blur-xl border border-border rounded-lg;
+    border-top: 3px solid hsl(var(--titan-gold));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .titan-card:hover {
+    @apply border-primary/50;
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-gold);
+  }
+
+  /* Gold Glow Button */
+  .titan-btn-gold {
+    @apply relative overflow-hidden font-heading font-semibold tracking-wider;
+    background: linear-gradient(145deg, hsl(var(--titan-gold)), hsl(37, 36%, 50%));
+    border: 1px solid hsl(var(--titan-gold-light));
+    box-shadow: var(--shadow-gold);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .titan-btn-gold:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-gold-intense);
+  }
+
+  /* Outline Button */
+  .titan-btn-outline {
+    @apply relative overflow-hidden font-heading font-semibold tracking-wider;
+    @apply border border-foreground/30 bg-transparent text-foreground;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .titan-btn-outline:hover {
+    @apply border-primary bg-primary/10;
+    transform: translateY(-2px);
+  }
+
+  /* Hexagon Badge */
+  .hexagon-badge {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    @apply bg-secondary border-2 border-primary;
+  }
+
+  /* Speed Lines Effect */
+  .speed-lines::after {
+    content: '';
+    @apply absolute inset-0 opacity-0;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      hsl(var(--titan-gold) / 0.3) 20%,
+      hsl(var(--titan-gold) / 0.5) 50%,
+      hsl(var(--titan-gold) / 0.3) 80%,
+      transparent 100%
+    );
+    transition: opacity 0.3s ease;
+  }
+
+  .speed-lines:hover::after {
+    @apply opacity-100;
+    animation: speedMove 0.6s ease-out;
+  }
+
+  /* Crossing Lines Pattern */
+  .crossing-lines {
+    background-image: 
+      linear-gradient(45deg, transparent 48%, hsl(var(--foreground) / 0.05) 49%, hsl(var(--foreground) / 0.05) 51%, transparent 52%),
+      linear-gradient(-45deg, transparent 48%, hsl(var(--foreground) / 0.05) 49%, hsl(var(--foreground) / 0.05) 51%, transparent 52%);
+    background-size: 60px 60px;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    animation: bounce 2s infinite;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-arabic {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  .text-shadow-gold {
+    text-shadow: 0 0 30px hsla(37, 36%, 61%, 0.5);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 30px hsla(37, 36%, 61%, 0.4);
+  }
+
+  .glow-gold-intense {
+    box-shadow: 0 0 60px hsla(37, 36%, 61%, 0.6);
+  }
+}
+
+/* Keyframe Animations */
+@keyframes metallicShine {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes speedMove {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 20px hsla(37, 36%, 61%, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsla(37, 36%, 61%, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes lineGrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--titan-gold));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--titan-gold-light));
 }
